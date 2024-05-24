@@ -1,2 +1,2 @@
-# sergiorportfolio.github.io
+# portfolio.github.io
 Sérgio Resendes Portfolio.
