@@ -12,10 +12,22 @@ body {
     font-size: 36px;
 }
 
-h1, p {
+h1 {
     font-family: 'Kenney Pixel', sans-serif;
     color: white;
     font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+}
+p {
+    font-family: 'Kenney Pixel', sans-serif;
+    color: white;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
