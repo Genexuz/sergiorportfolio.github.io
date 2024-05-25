@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Kenney Pixel';
+    src: url('fonts/RetroFonts/Kenney-Pixel.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Kenney Pixel', sans-serif;
+    background-color: black;
+    color: white;
+    font-size: 36px;
+}
+
+h1, p {
+    font-family: 'Kenney Pixel', sans-serif;
+    color: white;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+}
