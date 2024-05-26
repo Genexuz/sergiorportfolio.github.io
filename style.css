@@ -9,33 +9,29 @@ body {
     font-family: 'Kenney Pixel', sans-serif;
     background-color: black;
     color: white;
-    font-size: 36px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
-    font-family: 'Kenney Pixel', sans-serif;
     color: white;
-    font-size: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 36px;
+}
+
+.hello {
+    display: block;
+    font-size: 60px;
     height: 100vh;
-    margin: 0;
-    text-align: center;
-    flex-direction: column;
 }
-p {
-    font-family: 'Kenney Pixel', sans-serif;
-    color: white;
+
+.intro {
+    display: block;
     font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin: 0;
-    text-align: center;
-    flex-direction: column;
+    height: 100vh;
 }
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -70,9 +66,8 @@ p {
     color: #ccc;
 }
 
-.trailer-button {
-    display: flex;
-    flex-direction: column;
+.trailer-button, .play-button {
+    display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #ffcc00;
@@ -80,9 +75,15 @@ p {
     text-decoration: none;
     border-radius: 20px;
     font-weight: bold;
-    align-items: center;
+    text-align: center;
 }
 
-.trailer-button:hover {
+.trailer-button:hover, .play-button:hover {
     background-color: #ffaa00;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
