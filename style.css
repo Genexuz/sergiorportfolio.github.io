@@ -5,6 +5,7 @@
     font-style: normal;
 }
 
+
 body {
     font-family: 'Kenney Pixel', sans-serif;
     background-color: black;
@@ -13,29 +14,44 @@ body {
     text-align: center;
     margin: 0;
     padding: 20px;
+    scroll-behavior: smooth;
+    background: url('images/parallax-background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 h1 {
     color: white;
     font-size: 36px;
+    position: relative;
+    z-index: 1;
 }
 
 .hello {
     display: block;
-    font-size: 60px;
+    font-size: 120px;
     height: 100vh;
+    animation: fadeIn 2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro {
     display: block;
-    font-size: 40px;
+    font-size: 70px;
     height: 100vh;
+    animation: fadeIn 3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projects {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .project {
@@ -47,6 +63,9 @@ h1 {
     width: 80%;
     max-width: 600px;
     text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .project img {
@@ -83,8 +102,79 @@ h1 {
     background-color: #ffaa00;
 }
 
+.background-credit {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.background-credit a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.background-credit a:hover {
+    text-decoration: underline;
+}
+
 video {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
