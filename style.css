@@ -66,7 +66,7 @@ h1 {
     color: #ccc;
 }
 
-.trailer-button, .play-button {
+.trailer-button, .download-button {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -79,7 +79,7 @@ h1 {
     align-items: center;
 }
 
-.trailer-button:hover, .play-button:hover {
+.trailer-button:hover, .download-button:hover {
     background-color: #ffaa00;
 }
 
